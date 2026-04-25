@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFB6FD052Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CFB6FD052Q');
+  </script>
+
+  <!-- Google Search Console Verification (Paste your code here later) -->
+  <meta name="google-site-verification" content="PASTE_YOUR_SEARCH_CONSOLE_CODE_HERE" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gateway to Future — Premium Institute Experience</title>
-  <meta name="description" content="Premium Germany education institute website for German courses, Studienkolleg, admissions and visa mentorship." />
+  <title>The Gateway to Future — Premium Germany Education Institute</title>
+  <meta name="description" content="Premium Germany education institute for German courses, Studienkolleg, admissions and visa mentorship." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
+  
   <style>
     :root, [data-theme="light"] {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -92,8 +106,8 @@
     }
     .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:1rem 1.2rem}
     .brand{display:flex;align-items:center;gap:.9rem;font-weight:900;letter-spacing:.02em}
-    .logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(87,208,212,.2), rgba(255,210,122,.16));border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
-    .logo svg{width:24px;height:24px}
+    .logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:white;border:1px solid rgba(255,255,255,0.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2); overflow:hidden;}
+    .logo img{width:100%;height:100%;object-fit:contain;}
     .brand span{display:block;font-size:var(--text-sm);color:var(--color-text-muted);font-weight:500}
     .menu{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
     .menu a,.theme-toggle{padding:.85rem 1rem;border-radius:999px;font-size:var(--text-sm);border:1px solid var(--color-border);background:rgba(255,255,255,.03);color:var(--color-text-muted)}
@@ -188,16 +202,13 @@
 
   <header>
     <div class="nav shell">
-      <div class="brand" aria-label="Gateway to Future">
+      <div class="brand" aria-label="The Gateway to Future">
         <div class="logo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 16.5 12 4l8 12.5" />
-            <path d="M7.5 13.5h9" />
-            <path d="M9.5 17h5" />
-          </svg>
+           <!-- Using your own logo -->
+           <img src="logo.png" alt="Logo">
         </div>
         <div>
-          Gateway to Future
+          The Gateway to Future
           <span>Germany Education • Mentorship • Admissions</span>
         </div>
       </div>
@@ -217,7 +228,7 @@
       <div>
         <div class="eyebrow">Premium institute experience for Germany aspirants</div>
         <h1>Build your German future with a global academy presence.</h1>
-        <p>Gateway to Future is reimagined as a high-trust education brand that feels like a major institute: immersive visuals, strong admissions storytelling, premium program presentation, and a confident path from A1 German to Studienkolleg, university applications, and visa readiness.</p>
+        <p>The Gateway to Future is reimagined as a high-trust education brand that feels like a major institute: immersive visuals, strong admissions storytelling, premium program presentation, and a confident path from A1 German to Studienkolleg, university applications, and visa readiness.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Apply for mentorship</a>
           <a class="btn btn-secondary" href="#programs">Explore programs</a>
@@ -307,207 +318,4 @@
         <article class="program">
           <div class="kicker">Visa readiness</div>
           <h3>End-to-end guidance system</h3>
-          <p>Presented as a premium readiness program covering admissions alignment, financial proof, interview consistency, and migration confidence.</p>
-          <ul>
-            <li>APS and blocked account guidance</li>
-            <li>Interview and profile review</li>
-            <li>Travel-to-arrival planning mindset</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="reveal">
-      <article class="highlight">
-        <div class="highlight-panel">
-          <div>
-            <div class="kicker">Visual system</div>
-            <h3 style="font-family:var(--font-display);font-size:var(--text-xl);margin-top:.5rem">A premium big-institute feel with cinematic depth.</h3>
-            <p style="margin-top:.8rem">This concept uses a dark executive palette, illuminated accents, layered glass cards, and subtle orbital motion to create the feeling of a global institute platform.</p>
-          </div>
-          <div class="wave" aria-hidden="true"></div>
-        </div>
-        <div>
-          <div class="kicker">What changed</div>
-          <h3>From simple brochure page to premium digital flagship.</h3>
-          <p>Your original repository was a plain single-file informational page. This redesign shifts the brand into a more advanced category with better visual hierarchy, stronger CTA focus, richer atmosphere, more trust signals, and a professional institute-level identity.</p>
-          <div class="hero-actions" style="margin-top:1.2rem">
-            <a class="btn btn-primary" href="#contact">Launch this direction</a>
-            <a class="btn btn-secondary" href="https://github.com/ashusharmaa1408-lgtm/gateway-to-future" target="_blank" rel="noopener noreferrer">Open current repository</a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section id="journey" class="reveal">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Student journey</div>
-          <h2>A clearer process increases trust and inquiries.</h2>
-        </div>
-        <p>Education sites perform better when users can quickly find programs, costs, requirements, and direct calls to action, especially on mobile and admissions-focused journeys.</p>
-      </div>
-      <div class="timeline">
-        <article class="timeline-step" data-step="01">
-          <div class="kicker">Discover</div>
-          <h3>Choose your pathway</h3>
-          <p>Let visitors identify whether they need German classes, Studienkolleg planning, or visa and application support.</p>
-        </article>
-        <article class="timeline-step" data-step="02">
-          <div class="kicker">Qualify</div>
-          <h3>Share profile details</h3>
-          <p>Use a premium inquiry form to collect level, target intake, education history, and support needs.</p>
-        </article>
-        <article class="timeline-step" data-step="03">
-          <div class="kicker">Strategize</div>
-          <h3>Get a roadmap call</h3>
-          <p>Move prospects into a structured consultation flow that feels professional and high value.</p>
-        </article>
-        <article class="timeline-step" data-step="04">
-          <div class="kicker">Convert</div>
-          <h3>Join the ecosystem</h3>
-          <p>Guide them toward enrollment, mentorship packages, and long-term study planning with confidence.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="reveal">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Contact and enrollment</div>
-          <h2>Ready for a luxury-grade lead capture section.</h2>
-        </div>
-        <p>Strong educational websites in 2026 prioritize mobile-first navigation, visible calls to action, and user pathways centered on admissions intent rather than internal organization.</p>
-      </div>
-      <div class="contact-wrap">
-        <div class="contact-card">
-          <h3 style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:1rem">Book your Germany strategy session</h3>
-          <form>
-            <div>
-              <label for="name">Full name</label>
-              <input id="name" type="text" placeholder="Your full name" />
-            </div>
-            <div>
-              <label for="email">Email address</label>
-              <input id="email" type="email" placeholder="you@example.com" />
-            </div>
-            <div>
-              <label for="goal">Primary goal</label>
-              <select id="goal">
-                <option>German language course</option>
-                <option>Studienkolleg planning</option>
-                <option>University application support</option>
-                <option>Visa counseling</option>
-                <option>Full mentorship package</option>
-              </select>
-            </div>
-            <div>
-              <label for="message">Tell us about your target intake</label>
-              <textarea id="message" placeholder="Example: Winter intake, B1 target, need Studienkolleg guidance"></textarea>
-            </div>
-            <button class="btn btn-primary" type="button" onclick="alert('This premium concept is ready. Next step: connect the form to your backend, WhatsApp API, Formspree, or Telegram bot.')">Request consultation</button>
-          </form>
-        </div>
-        <aside class="glass">
-          <div class="kicker">Brand positioning</div>
-          <h3 style="font-family:var(--font-display);font-size:var(--text-xl);margin:.5rem 0 1rem">Gateway to Future, reimagined for scale.</h3>
-          <p>This concept is intentionally built to feel bigger than a freelancer landing page. It presents you as an education company with strong systems, clearer authority, and a more premium student-facing identity.</p>
-          <ul class="contact-list" style="margin-top:1.2rem">
-            <li><strong>Base:</strong> Berlin, Germany</li>
-            <li><strong>Core audience:</strong> Germany aspirants from India and beyond</li>
-            <li><strong>Primary channels:</strong> WhatsApp, social content, consultation funnels</li>
-            <li><strong>Next upgrade:</strong> connect CRM, Calendly, payment page, and student dashboard</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer class="shell">
-    <div class="footer-bar">
-      <span>© 2026 Gateway to Future</span>
-      <span>Premium academy concept • immersive web experience</span>
-    </div>
-  </footer>
-
-  <script>
-    const root = document.documentElement;
-    const toggle = document.querySelector('[data-theme-toggle]');
-    let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    root.setAttribute('data-theme', theme);
-    toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-    toggle.addEventListener('click', () => {
-      theme = theme === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', theme);
-      toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-    });
-
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, {threshold: 0.18});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-    const canvas = document.getElementById('space');
-    const ctx = canvas.getContext('2d');
-    let w, h, dpr, particles;
-
-    function resize(){
-      dpr = Math.min(window.devicePixelRatio || 1, 1.8);
-      w = canvas.width = innerWidth * dpr;
-      h = canvas.height = innerHeight * dpr;
-      canvas.style.width = innerWidth + 'px';
-      canvas.style.height = innerHeight + 'px';
-      ctx.setTransform(dpr,0,0,dpr,0,0);
-      initParticles();
-    }
-
-    function initParticles(){
-      const count = Math.min(140, Math.floor(innerWidth / 10));
-      particles = Array.from({length: count}, () => ({
-        x: Math.random() * innerWidth,
-        y: Math.random() * innerHeight,
-        z: Math.random() * 1,
-        r: Math.random() * 1.8 + .2,
-        vx: (Math.random() - .5) * .18,
-        vy: (Math.random() - .5) * .18,
-      }));
-    }
-
-    function draw(){
-      ctx.clearRect(0,0,innerWidth,innerHeight);
-      for(let i=0;i<particles.length;i++){
-        const p = particles[i];
-        p.x += p.vx * (p.z + .3);
-        p.y += p.vy * (p.z + .3);
-        if(p.x < -20) p.x = innerWidth + 20;
-        if(p.x > innerWidth + 20) p.x = -20;
-        if(p.y < -20) p.y = innerHeight + 20;
-        if(p.y > innerHeight + 20) p.y = -20;
-        const glow = 0.18 + p.z * 0.6;
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(255,255,255,${glow})`;
-        ctx.arc(p.x, p.y, p.r + p.z * 1.6, 0, Math.PI * 2);
-        ctx.fill();
-        for(let j=i+1;j<particles.length;j++){
-          const q = particles[j];
-          const dx = p.x - q.x, dy = p.y - q.y;
-          const dist = Math.hypot(dx,dy);
-          if(dist < 110){
-            ctx.strokeStyle = `rgba(87,208,212,${(1 - dist / 110) * 0.12})`;
-            ctx.lineWidth = .6;
-            ctx.beginPath();
-            ctx.moveTo(p.x,p.y);
-            ctx.lineTo(q.x,q.y);
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', resize);
-    resize();
-    draw();
-  </script>
-</body>
-</html>
+          <p>Presented as a premium readiness program covering admissions alignm
