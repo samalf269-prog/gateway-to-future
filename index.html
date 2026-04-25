@@ -10,7 +10,16 @@
     gtag('config', 'G-CFB6FD052Q');
   </script>
 
-  <!-- Google Search Console Verification (Paste your code here later) -->
+  <!-- CookieHub Consent Management -->
+  <script src="https://cdn.cookiehub.eu/c2/82f0d4b1.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var cpm = {};
+      window.cookiehub.load(cpm);
+    });
+  </script>
+
+  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="PASTE_YOUR_SEARCH_CONSOLE_CODE_HERE" />
 
   <meta charset="UTF-8" />
@@ -204,7 +213,6 @@
     <div class="nav shell">
       <div class="brand" aria-label="The Gateway to Future">
         <div class="logo">
-           <!-- Using your own logo -->
            <img src="logo.png" alt="Logo">
         </div>
         <div>
@@ -422,4 +430,103 @@
         <aside class="glass">
           <div class="kicker">Brand positioning</div>
           <h3 style="font-family:var(--font-display);font-size:var(--text-xl);margin:.5rem 0 1rem">The Gateway to Future, reimagined for scale.</h3>
-          <p>This con
+          <p>This concept is intentionally built to feel bigger than a freelancer landing page. It presents you as an education company with strong systems, clearer authority, and a more premium student-facing identity.</p>
+          <ul class="contact-list" style="margin-top:1.2rem">
+            <li><strong>Base:</strong> Berlin, Germany</li>
+            <li><strong>Core audience:</strong> Germany aspirants from India and beyond</li>
+            <li><strong>Primary channels:</strong> WhatsApp, social content, consultation funnels</li>
+            <li><strong>Next upgrade:</strong> connect CRM, Calendly, payment page, and student dashboard</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div class="footer-bar">
+      <span>© 2026 The Gateway to Future</span>
+      <span>Premium academy concept • immersive web experience</span>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.querySelector('[data-theme-toggle]');
+    let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', theme);
+    toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    toggle.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    });
+
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, {threshold: 0.18});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    const canvas = document.getElementById('space');
+    const ctx = canvas.getContext('2d');
+    let w, h, dpr, particles;
+
+    function resize(){
+      dpr = Math.min(window.devicePixelRatio || 1, 1.8);
+      w = canvas.width = innerWidth * dpr;
+      h = canvas.height = innerHeight * dpr;
+      canvas.style.width = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      initParticles();
+    }
+
+    function initParticles(){
+      const count = Math.min(140, Math.floor(innerWidth / 10));
+      particles = Array.from({length: count}, () => ({
+        x: Math.random() * innerWidth,
+        y: Math.random() * innerHeight,
+        z: Math.random() * 1,
+        r: Math.random() * 1.8 + .2,
+        vx: (Math.random() - .5) * .18,
+        vy: (Math.random() - .5) * .18,
+      }));
+    }
+
+    function draw(){
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+      for(let i=0;i<particles.length;i++){
+        const p = particles[i];
+        p.x += p.vx * (p.z + .3);
+        p.y += p.vy * (p.z + .3);
+        if(p.x < -20) p.x = innerWidth + 20;
+        if(p.x > innerWidth + 20) p.x = -20;
+        if(p.y < -20) p.y = innerHeight + 20;
+        if(p.y > innerHeight + 20) p.y = -20;
+        const glow = 0.18 + p.z * 0.6;
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(255,255,255,${glow})`;
+        ctx.arc(p.x, p.y, p.r + p.z * 1.6, 0, Math.PI * 2);
+        ctx.fill();
+        for(let j=i+1;j<particles.length;j++){
+          const q = particles[j];
+          const dx = p.x - q.x, dy = p.y - q.y;
+          const dist = Math.hypot(dx,dy);
+          if(dist < 110){
+            ctx.strokeStyle = `rgba(87,208,212,${(1 - dist / 110) * 0.12})`;
+            ctx.lineWidth = .6;
+            ctx.beginPath();
+            ctx.moveTo(p.x,p.y);
+            ctx.lineTo(q.x,q.y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    draw();
+  </script>
+</body>
+</html>
