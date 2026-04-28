@@ -13,6 +13,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      - name: Create books directory
+        run: mkdir -p books
+
       - name: Download A1.1 PDF
         run: curl -L -o "books/A1.1-Your-First-Step-to-Germany.pdf" "https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/33327384/ac2d516b-0e99-44a2-a617-899ae699f90d/Your-First-Step-to-Germany.pdf"
 
@@ -21,7 +24,6 @@ jobs:
 
       - name: Commit and push PDFs
         run: |
-          mkdir -p books
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add books/
